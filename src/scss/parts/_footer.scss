@@ -1,0 +1,136 @@
+footer{
+
+    background: $primary;
+    color: #fff;
+
+    & .navigation-blocks-wrapper{
+
+        display: flex;
+        flex-wrap: wrap;
+
+        & .separator{
+            flex-grow: 1;
+
+            @media(max-width: 1400px){
+                width: 100%;
+            }
+        }
+
+        & .navigation-block{
+
+            padding: .75rem;
+
+            @media(max-width: 1400px){
+                flex-grow: 1;
+            }
+
+            @media(min-width: 600px){
+
+                &.nb-left{
+                    padding-right: 20px;
+                }
+    
+                &.nb-right{
+                    padding-left: 20px;
+                }
+            }
+
+            & .header{
+                font-weight: 500;
+                border-bottom: 1px solid #fff;
+                padding-bottom: 6px;
+                margin-bottom: 6px;
+            }
+
+            & .links{
+                display: flex;
+                flex-direction: column;
+
+                & a, div{
+                    color: #fff;
+                    line-height: 26px;
+                }
+            }
+
+            &#delivery-times{
+
+                & .subheader{
+                    text-decoration: underline;
+                    text-underline-offset: 3px;
+                    text-decoration-color: rgba(#fff, .5);
+                    text-decoration-style: dotted;
+                    text-decoration-thickness: 1px;
+                }
+
+                & .left{
+                    padding-right: 20px;
+                }
+            }
+
+            @media(max-width: 600px){
+
+                &:not(#delivery-times){
+                    border: 1px solid red;
+                    display: none;
+                }
+
+                & .lr-pair{
+
+                    flex-wrap: wrap;
+                    
+                    & .left, & .right{
+                        flex-grow: 1;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    & .footer-copyright{
+        background: darken($primary, 10);
+        line-height: 40px;
+        padding: 0 .75rem;
+
+        & .lr-pair{
+
+            flex-wrap: wrap;
+
+            & .left{
+                flex-grow: 1;
+            }
+        }
+
+        & .right{
+
+            display: flex;
+
+            & .icon{
+                height: 40px;
+                width: 40px;
+                background-size: auto 60%;
+    
+                &:hover{
+                    background-color: darken($primary, 20);
+                }
+            }
+        }
+
+    }
+
+    & > .container{
+        padding: 30px 0;
+    }
+
+    & .mobile-appstores{
+        
+        text-align: center;
+        padding-top: 20px;
+
+        // @media(min-width: 600px){
+            // display: none;
+        // }
+    }
+
+}

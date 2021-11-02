@@ -1,0 +1,74 @@
+.bottom-toolbar{
+    position: fixed;
+    bottom: 0;
+    background: $paper;
+    box-shadow: 0 -2px 4px rgba(black, .4);
+    z-index: 20;
+    display: flex;
+    width: 100%;
+
+    @media(min-width: 750px){
+        display: none;
+    }
+
+    & .popup{
+
+        top: unset;
+        left: unset;
+        right: 0;
+        bottom: calc(100% - 40px);
+
+        &.open{
+            top: unset;
+            bottom: 100%;
+        }
+    }
+
+    & > a, & > div{
+        padding: 6px 0;
+        width: 25%;
+        display: block;
+        position: relative;
+
+        &:not(:last-of-type){
+            border-right: 1px solid rgba($fogged, .5);
+        }
+
+        & ul{
+            display: block;
+            position: absolute;
+        }
+
+        & .icon{
+            display: block;
+            margin: auto;
+        }
+
+        & .text{
+            display: block;
+            text-align: center;
+            font-size: 10px;
+            color: $fogged;
+        }
+
+        & .count{
+            position: absolute;
+            top: 6px;
+            left: calc(50% + 6px);
+            background: red;
+            color: #fff;
+            padding: 0 6px;
+            font-size: 10px;
+            border-radius: 10px;
+        }
+
+        &.accent{
+
+            background: $secondary;
+
+            & .text{
+                color: #fff;
+            }
+        }
+    }
+}
