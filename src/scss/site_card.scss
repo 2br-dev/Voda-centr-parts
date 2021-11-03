@@ -1,0 +1,138 @@
+@import './framework/color-variables';
+@import './framework/color-classes';
+@import './framework/vars';
+@import './parts/vars';
+
+.col[data-id]{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+
+    & .productList_item{
+        display: flex;
+        // flex-wrap: wrap;
+        max-width: 100%;
+
+        & .block_product_img{
+            
+            padding: 0 .6rem;
+            text-align: center;
+            flex-grow: 1;
+
+            & img{
+                max-width: 100%;
+                height: auto;
+                width: unset;
+                min-width: 100px;
+            }
+        }
+        
+        & .block_product_info{
+            
+            padding: 0 .6rem;
+            text-align: center;
+            
+            & h2{
+                
+                & a{
+                    color: black;
+                    font-size: 18px;
+                }
+            }
+            
+            & .price1, & .price2, & .price3{
+                
+                display: flex;
+                
+                & p{
+                    text-align: center;
+                    margin: 0;
+                    display: block;
+                    flex-grow: 1;
+                }
+            }
+
+            & .block_product_action{
+
+                text-align: center;
+                margin-top: 20px;
+                
+                & .button_block{
+                    
+                    & .amountBlock{
+                        
+                        display: flex;
+                        // flex-wrap: wrap;
+                        width: fit-content;
+                        margin: auto;
+
+                        & > *{
+                            margin: 3px 3px;
+                        }
+                        
+                        & .amountWrapper{
+                            
+                            display: flex;
+                            background: $primary;
+                            border-radius: 20px;
+                            
+                            & input{
+                                width: 30px;
+                                border-radius: 20px;
+                                border: 0;
+                                text-align: center;
+                            }
+
+                            & a{
+                                line-height: 36px;
+                                padding: 0 6px;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                
+                & a{
+                    
+                    color: $primary;
+                    display: inline-block;
+
+                    &.button{
+
+                        &.color_blue{
+
+                            background: $primary;
+                            display: inline-block;
+                            padding: 7px 24px 4px 24px;
+                            border-radius: 20px;
+
+                            & .cart_icon{
+                                display: inline-block;
+                                width: 22px;
+                                height: 20px;
+                                background: url('https://voda-centr.ru/templates/vodacentr/resource/img/cart_white.png') center center no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media(max-width: $extra-small){
+            flex-direction: column;
+
+            & .block_product_img, .block_product_info{
+                flex-grow: 1;
+                width: unset;
+                text-align: center;
+            }
+        }
+    }
+
+    & .block_product_notice{
+        text-align: center;
+        font-size: 12px;
+    }
+}
